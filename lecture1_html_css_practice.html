@@ -3,6 +3,41 @@
 
 <head>
     <title> Lecture1 HTML, CSS Practice</title>
+    <style>
+        /*CSS seletor for selecting specific input*/
+        input[type=text] {
+            background-color: cornflowerblue;
+        }
+        input[type=password] {
+            background-color: cyan;
+        }
+        input[type=number] {
+            background-color: khaki;
+        }
+        /*CSS selector for child element*/
+        ol>ul {
+            color: hotpink;
+        }
+        /*CSS properties for pseudoclass selector and button*/
+        button {
+            height: 50px;
+            width: 100px;
+            font-size: 30px;
+            background-color: lightcoral;
+        }
+        button:hover {
+            background-color: aquamarine;
+        }
+        /*Examples of pseudoelement selector*/
+        a::before {
+            content: "\21d2";
+            font-weight: bold;
+        }
+        p::selection {
+            color: red;
+            background-color: darkkhaki;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,12 +84,15 @@
                 of logic and applied mathematics. Computer science did not come to be recognized as a separate and independent field of scientific study until the late 1950s to early 1960s.) Even today, there are branches of computer science quite distinct
                 from the study of “real” machines. In theoretical computer science, for example, researchers study the logical and mathematical properties of problems and their solutions. Frequently, these researchers investigate problems not with actual
                 computers but rather with formal models of computation, which are easier to study and analyze mathematically. Their work involves pencil and paper, not circuit boards and disks.</p>
-                <!--Form for username and password-->
+                <!--Form for username, password and age-->
                 <form>
-                    <div>
+                    <div class="form">
                         <input name="name" type="text" placeholder="Name">
                         <input name="password" type="password" placeholder="Password">
+                        <input name="age" type="number" placeholder="Age">
                 </form>
+                <!--A button with pseudo class-->
+                <button>Log in</button>
                 <!--Shows some radio button-->
                 <div>
                     What's your favourite color?
@@ -74,6 +112,16 @@
                         <option value="Nepal"></option>
                         <option value="Bhutan"></option>
                     </datalist>
+                </div>
+                <div>
+                    <ol>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <ul>
+                            <li>Sublist item 1</li>
+                            <li>Sublist item 2</li>
+                        </ul>
+                    </ol>
                 </div>
 </body>
 
